@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use("/profilePics", express.static("profilePics"));
-
+app.use(express.static(path.join(__dirname, "./client/build")));
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "profilePics");
@@ -48,6 +48,10 @@ let connectToMDB = async () => {
 };
 
 connectToMDB();
+
+app.get("*", (req, res) => {
+  res.sendFile("./client/build/index.html");
+});
 
 app.post("/signup", upload.single("profilePic"), async (req, res) => {
   console.log("inside signup");
