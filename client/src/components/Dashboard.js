@@ -11,7 +11,7 @@ function Dashboard() {
   });
 
   let onDeleteProfile = async () => {
-    let url = `http://localhost:4567/deleteProfile?email=${storeObj.loginDetails.email}`;
+    let url = `/deleteProfile?email=${storeObj.loginDetails.email}`;
 
     let reqOptions = {
       method: "DELETE",
@@ -42,9 +42,7 @@ function Dashboard() {
       >
         Delete Profile
       </button>
-      <img
-        src={`http://localhost:4567/${storeObj.loginDetails.profilePic}`}
-      ></img>
+      <img src={`/${storeObj.loginDetails.profilePic}`}></img>
     </div>
   );
 }
