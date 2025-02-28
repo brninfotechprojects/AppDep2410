@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+}
+
+form{
+  background-color: deepskyblue;
+  display: inline-block;
+  padding: 20px;
+}
+
+form label{
+  display:inline-block;
+  width:100px
+}
+
+form div{
+  margin:15px;
+}
+
+.profilePicPreview{
+  width: 120px;
+}
+
+nav{
+  background-color: orangered;
+  color:white;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+a:visited{
+  color:black;
+}
+
+a:link{
+  color:black;
+}
